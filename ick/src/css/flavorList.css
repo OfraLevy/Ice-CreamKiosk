@@ -1,0 +1,8 @@
+.sold-out {
+    opacity: 0.5;
+    background-color: lightgray;
+}
+
+.available {
+    background-color: white;
+}
