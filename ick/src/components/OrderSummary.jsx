@@ -1,4 +1,4 @@
-import "./OrderSummary.css";
+import "../css/orderSummary.css";
 
 function OrderSummary(props){
     return (

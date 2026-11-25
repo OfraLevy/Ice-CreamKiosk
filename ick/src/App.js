@@ -1,5 +1,9 @@
 import { useState } from "react";
 import Header from "./components/Header";
+import FlavorList from "./components/FlavorList";
+import OrderSummary from "./components/OrderSummary";
+import NoticeArea from "./components/NoticeArea";
+
 import "./css/toggle.css"
 
 function App() {
@@ -11,18 +15,30 @@ function App() {
   ]);
   const SCOOP_LIMIT = 5;
   const [showOnlyAvailable, setShowOnlyAvailable] = useState(false)
+  const [scoopsSelected, setScoopsSelected] = useState(0)
   return (
     <div className="App">
       <Header />
-      <div>
-        <label class="switch">
+      <div className="available-filter">
+        <label className="switch">
           <input type="checkbox" checked={showOnlyAvailable} onChange={()=>setShowOnlyAvailable(!showOnlyAvailable)}/>
-            <span class="slider"></span>
+            <span className="slider"></span>
         </label>
         <label>show Only Available</label>
-        
       </div>
+      <div className="app-content">
+      <FlavorList flavors={flavors} showOnlyAvailable={showOnlyAvailable} setScoopsSelected={setScoopsSelected} setFlavors={setFlavors} scoopLimit={SCOOP_LIMIT}/>
+      <div className="notice-container">
+      { scoopsSelected>=SCOOP_LIMIT && ( 
+        <NoticeArea message="Scoop limit reached" />)
+      }
+      {  showOnlyAvailable && flavors.filter(f => !f.isSoldOut).length === 0 &&( 
+        <NoticeArea message="No flavors to show" />)
+      }
+      </div>
+      <OrderSummary scoopsSelected={scoopsSelected}/>
     </div>
+  </div>
   );
 }
 
