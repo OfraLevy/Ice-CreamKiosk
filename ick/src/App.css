@@ -1,9 +1,18 @@
-.App {
-    font-family: Arial, sans-serif;
+html{
+
     background-color: #fffaf5;
-    min-height: 100vh;
-    padding: 25px 40px;
+}
+.App {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    font-family: Arial, sans-serif;
     color: #49352a;
+}
+
+.App h1 {
+    text-align: center;
+    margin-bottom: 35px;
 }
 
 .available-filter {
@@ -21,3 +30,4 @@
 .notice-container {
     margin: 20px 0;
 }
+

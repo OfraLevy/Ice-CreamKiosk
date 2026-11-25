@@ -1,11 +1,12 @@
 .order-summary {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 40px;
+    padding: 25px;
+    border-radius: 16px;
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
-    margin-top: 20px;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .order-summary h2 {

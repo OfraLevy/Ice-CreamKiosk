@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import FlavorList from "./components/FlavorList";
 import OrderSummary from "./components/OrderSummary";
 import NoticeArea from "./components/NoticeArea";
-
+import "./App.css"
 import "./css/toggle.css"
 
 function App() {
