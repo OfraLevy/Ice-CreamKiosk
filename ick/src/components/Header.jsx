@@ -1,7 +1,8 @@
+import "../css/header.css"
 function Header(){
     return (
-        <header>
-            <h1>Ice-Cream Kiosk</h1>
+        <header className="header">
+            <h1 className="header-text">Ice-Cream Kiosk</h1>
         </header>
     )
 }

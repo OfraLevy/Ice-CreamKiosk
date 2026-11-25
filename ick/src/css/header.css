@@ -1,4 +1,9 @@
-header{
-     display: "flex";
-      justifyContent: "center"
-    }
+.header {
+    display: "flex";
+    justify-content: "center"
+}
+
+.header-text {
+    font-weight: "bold";
+    font-size: "40px"
+}
